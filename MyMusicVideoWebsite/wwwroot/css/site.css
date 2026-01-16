@@ -1,0 +1,67 @@
+:root {
+    --bg-gradient: linear-gradient(135deg, #07132a 0%, #0b1b2f 50%, #081424 100%);
+    --bg-solid: #071428;
+    --text-color: #ff6a00;
+    --ui-font: "Inter", "Segoe UI", Roboto, -apple-system, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* existing rules kept and preserved */
+
+
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 900px) {
+    html {
+        font-size: 20px;
+       
+    }
+}
+body {
+    margin-bottom: 60px;
+    color: var(--text-color);
+    font-family: var(--ui-font);
+    background: var(--bg-gradient);
+}
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+.video-container.large {
+    position: relative;
+    width: 100%;
+    height: 70vh; /* large height relative to viewport */
+    max-height: 900px; /* cap so it doesn't grow too large on very tall screens */
+    min-height: 360px; /* ensure a reasonable minimum */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+    background: #000;
+}
+
+    .video-container.large iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
